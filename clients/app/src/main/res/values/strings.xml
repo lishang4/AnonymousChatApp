@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">AnonymousChat</string>
+    <string name="edit_text_hint">Write a message...</string>
+    <string name="btn_sending_text">Send</string>
+    <string name="response_mock_text">mock text by response</string>
+</resources>
