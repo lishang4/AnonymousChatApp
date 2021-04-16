@@ -21,7 +21,7 @@
             android:padding="16dp"
             android:background="@drawable/bg_send_message"
             android:text="@{message.text}"
-            tools:text="@string/response_mock_text"
+            tools:text="mock"
             android:textColor="@android:color/white"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />

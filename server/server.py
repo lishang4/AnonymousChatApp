@@ -9,15 +9,17 @@ class Server:
         return os.getenv('WS_PORT', '8765')
 
     def get_host(self):
-        return os.getenv('WS_HOST', 'localhost')
-
+        return os.getenv('WS_HOST', '192.168.3.105')
 
     def start(self):
         return websockets.serve(self.handler, self.get_host(), self.get_port())
 
     async def handler(self, websocket, path):
+        print("connected!!")
         async for message in websocket:
-            if message != 'ws://localhost:8765':
+            print(f'get_host: {self.get_host}')
+            print(f'get_port: {self.get_port}')
+            if message != 'ws://172.104.123.152:8765':
                 print('server received :', message[::-1])
             try:
                 await websocket.send(message[::-1])

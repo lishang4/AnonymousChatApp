@@ -11,6 +11,6 @@
     <color name="bg_main_activity">#010530</color>
     <color name="bg_send_btn">#2196F3</color>
     <color name="bg_send_msg_origin">#4CAF50</color>
-    <color name="bg_send_msg">#2196F3</color>
-    <color name="bg_receive_msg">#90252728</color>
+    <color name="bg_receive_msg">#2196F3</color>
+    <color name="bg_send_msg">#333637</color>
 </resources>
