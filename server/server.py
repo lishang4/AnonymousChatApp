@@ -12,12 +12,15 @@ class Server:
         return os.getenv('WS_HOST', 'localhost')
 
 
+    def get_protocal(self):
+        return os.getenv('WS_HOST', 'ws')
+
     def start(self):
         return websockets.serve(self.handler, self.get_host(), self.get_port())
 
     async def handler(self, websocket, path):
         async for message in websocket:
-            if message != 'ws://localhost:8765':
+            if message != f'{self.get_protocal}://{self.get_host}:{self.get_port}':
                 print('server received :', message[::-1])
             try:
                 await websocket.send(message[::-1])
